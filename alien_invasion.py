@@ -4,6 +4,7 @@ from ship import Ship
 from pygame.sprite import Group
 import game_functions as gf
 
+
 def run_game():
     """Initialize game, settings and screen object."""
 
@@ -27,6 +28,7 @@ def run_game():
         ship.update()
         gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
+
 
 run_game()
 

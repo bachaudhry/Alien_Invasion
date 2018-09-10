@@ -1,5 +1,6 @@
 import pygame
 
+
 class Ship():
 
     def __init__(self, ai_settings, screen):
@@ -28,10 +29,8 @@ class Ship():
         # Update the ship's center value and not the rect.
         if self.moving_right and self.rect.right < self.screen_rect.right:
             self.center += self.ai_settings.ship_speed_factor
-
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
-
         # Update the rect object from self.center.
         self.rect.centerx = self.center
 
