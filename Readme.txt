@@ -23,3 +23,5 @@ The "game_functions.py" module contains all of the functions which will control 
 E. Aliens:
 
 F. Bullets:
+
+G. Game Stats:
