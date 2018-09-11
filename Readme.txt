@@ -6,14 +6,20 @@ The player shoots and destroys the aliens. If the player shoots all the aliens, 
 
 MODULES:
 
-A. SETTINGS:
+A. Main: 
+
+B. Settings:
 
 The "settings.py" module, containing a Settings class, was  created to store all of our settings which can be invoked throughout the length of the main code. 
 
-B. Ships:
+C. Ships:
 
 The "ship.py" module contains the class Ship. Here the ship is loaded and positioned into the main program. The ship's movement is also controlled at this end.
 
-C. Game Functions:
+D. Game Functions:
 
 The "game_functions.py" module contains all of the functions which will control the movement, firing and other actions of the ship.
+
+E. Aliens:
+
+F. Bullets:
