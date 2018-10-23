@@ -18,13 +18,14 @@ class Scoreboard():
         # Prepare the initial score image.
         self.prep_score()
         self.prep_high_score()
+        self.prep_level()
 
     def prep_score(self):
         """Turn the score into a rendered image."""
         rounded_score = round(self.stats.score, -1)
         score_str = "{:,}".format(rounded_score)
         self.score_image = self.font.render(score_str, True, self.text_color,
-                                             self.ai_settings.bg_color)
+                                            self.ai_settings.bg_color)
 
         # Display the score at the top right of the screen.
         self.score_rect = self.score_image.get_rect()
@@ -47,3 +48,14 @@ class Scoreboard():
         """Draw score to the screen."""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
+        self.screen.blit(self.level_image, self.level_rect)
+
+    def prep_level(self):
+        """TUrn the level into a rendered image."""
+        self.level_image = self.font.render(str(self.stats.level), True,
+                                            self.text_color, self.ai_settings.bg_color)
+
+        # Position the level right below the score.
+        self.level_rect = self.level_image.get_rect()
+        self.level_rect.right = self.score_rect.right
+        self.level_rect.top = self.score_rect.bottom + 10
