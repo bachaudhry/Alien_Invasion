@@ -8,6 +8,8 @@ MODULES:
 
 A. Main: 
 
+Contains the code to execute the game and all of its modules.
+
 B. Settings:
 
 The "settings.py" module, containing a Settings class, was  created to store all of our settings which can be invoked throughout the length of the main code. 
@@ -22,6 +24,12 @@ The "game_functions.py" module contains all of the functions which will control 
 
 E. Aliens:
 
+Contains all of the functions used to define the alien class, control their movement etc.
+
 F. Bullets:
 
+Contains functions used to define bullet characteristics.
+
 G. Game Stats:
+
+Scoring, difficulty levels, player lives etc.
